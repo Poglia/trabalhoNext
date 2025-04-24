@@ -1,6 +1,9 @@
-"use client";
-
 import { Post } from "@/types/Post";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Blog",
+  };
 
 type Props = {
     params: {

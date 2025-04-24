@@ -1,4 +1,6 @@
-"use client";
+
+import { Metadata } from "next";
+
 const Page = () => {
   return (
     <div>

@@ -1,8 +1,16 @@
+import { Metadata } from 'next';
 import './globals.css';
 import { ReactNode } from 'react';
 
 type Props = {
   children: React.ReactNode;
+};
+
+export const metadata: Metadata = {
+  title:{
+    template: '%s | Poglia',
+    default: 'Poglia',
+  }
 };
 
 const Layout = ({children}: Props) => {
