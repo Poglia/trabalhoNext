@@ -37,3 +37,14 @@ const Page = async ({ params }: Props) => {
 };
 
 export default Page;
+
+export const generateStaticParams = async () => {
+  const postsRequest = await fetch(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  const posts: Post[] = await postsRequest.json();
+
+  return posts.map((post) => ({
+    postid: post.id.toString(),
+  }));
+}
