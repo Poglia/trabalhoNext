@@ -1,9 +1,18 @@
 "use server"
 
-export async function receberDados(formData: FormData) {
+import { redirect } from "next/navigation";
+
+
+export async function receberDados(prevState: any, formData: FormData) {
 
     const name = formData.get("name");
-    const age = formData.get("age");
+    const age = parseInt(formData.get("age") as string);
 
-    console.log(name, age);
+    if(age < 18) {
+        return {
+            msg: "Você é menor de idade",
+        }
+    }else {
+        redirect("/signin");
+    }
 }
