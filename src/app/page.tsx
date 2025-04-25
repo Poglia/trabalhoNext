@@ -1,5 +1,6 @@
 
 import { Posts } from "@/components/post";
+import { PostClient } from "@/components/posts-client";
 import { Metadata } from "next";
 
 const Page = () => {
@@ -7,7 +8,8 @@ const Page = () => {
     <div>
       <h1>Pagina Inicial</h1>
 
-      <Posts />
+     {/* <Posts /> */}
+     <PostClient />
     </div>
   );
 }
